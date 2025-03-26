@@ -8,47 +8,22 @@ import ArrowBTN from "../../Components/ArrowBTN/ArrowBTN";
 import Women from "../../assets/Women.webp";
 import { useSwipeable } from "react-swipeable";
 import Form from "../../Components/Form/Form";
+import doctor from "../../assets/doctor.webp";
+import DoctorBox from "../../Components/DoctorBox/DoctorBox";
+import Slider from "../../Components/Slider/Slider";
 
 const Home = () => {
-  const [currentIndex, setCurrentIndex] = useState(0);
-  const [itemsPerView, setItemsPerView] = useState(3);
-  const totalItems = serviceDetailes.length;
 
-  useEffect(() => {
-    const updateItemsPerView = () => {
-      const width = window.innerWidth;
-      if (width < 768) {
-        setItemsPerView(1);
-      } else if (width < 1024) {
-        setItemsPerView(2);
-      } else {
-        setItemsPerView(3);
-      }
-    };
+  const doctors = [
+    { id: 1, name: "Miranda Kellers", spec: "Cosmetologist", img: doctor },
+    { id: 2, name: "John Smith", spec: "Dermatologist", img: doctor },
+    { id: 3, name: "Sara Ahmed", spec: "Laser Specialist", img: doctor },
+    { id: 4, name: "Sara Ahmed", spec: "Laser Specialist", img: doctor },
+    { id: 5, name: "Sara Ahmed", spec: "Laser Specialist", img: doctor },
+  ];
 
-    updateItemsPerView();
-    window.addEventListener("resize", updateItemsPerView);
-    return () => window.removeEventListener("resize", updateItemsPerView);
-  }, []);
 
-  const handleNext = () => {
-    if (currentIndex < totalItems - itemsPerView) {
-      setCurrentIndex((prev) => prev + 1);
-    }
-  };
 
-  const handlePrev = () => {
-    if (currentIndex > 0) {
-      setCurrentIndex((prev) => prev - 1);
-    }
-  };
-
-  const handlers = useSwipeable({
-    onSwipedLeft: handleNext,
-    onSwipedRight: handlePrev,
-    preventScrollOnSwipe: true,
-    trackMouse: true, // to allow desktop swipe
-  });
 
   return (
     <div>
@@ -72,34 +47,18 @@ const Home = () => {
           <h1>Our Services</h1>
           <ArrowBTN BTN_Name="View All Services" />
         </div>
-        <div className="arrow-container">
-          <div className="icon" onClick={handlePrev}>
-            <FaArrowLeft />
-          </div>
-          <div className="icon" onClick={handleNext}>
-            <FaArrowRight />
-          </div>
-        </div>
-
-        <div className="popularTreatment-Container" {...handlers}>
-          <div
-            className="slider-track"
-            style={{
-              transform: `translateX(-${currentIndex * (100 / itemsPerView)}%)`,
-            }}
-          >
-            {serviceDetailes.map((ele) => (
-              <div key={ele.id} style={{ flex: `0 0 ${100 / itemsPerView}%` }}>
-                <ServiceBox
-                  ServiceName={ele.name}
-                  imageUrl={ele.img}
-                  serviceCategory={ele.category}
-                  imgAlt={ele.name}
-                />
-              </div>
-            ))}
-          </div>
-        </div>
+        <Slider
+          items={serviceDetailes}
+          renderItem={(service) => (
+            <ServiceBox
+              key={service.id}
+              ServiceName={service.name}
+              imageUrl={service.img}
+              serviceCategory={service.category}
+              imgAlt={service.name}
+            />
+          )}
+        />
       </div>
 
       {/* Enhance Your Natural Glow */}
@@ -161,9 +120,28 @@ const Home = () => {
           </div>
         </div>
       </div>
+      {/* Doctors */}
+      <div className="PopularTreatment">
+        <div className="popularTreatment_Head">
+          <h1>Our Team</h1>
+          <ArrowBTN BTN_Name="View All Doctors" />
+        </div>
+        <Slider
+  items={doctors}
+  renderItem={(doc) => (
+    <DoctorBox
+      key={doc.id}
+      DoctorName={doc.name}
+      DoctorSpec={doc.spec}
+      image={doc.img}
+      imgAlt={doc.name}
+    />
+  )}
+/>
+      </div>
       {/* Contatc  */}
       <div className="home-contact">
-        <Form/>
+        <Form />
       </div>
     </div>
   );
