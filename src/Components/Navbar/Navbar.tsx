@@ -30,7 +30,7 @@ const Navbar = () => {
       <span className="separator">|</span>
       <Link to="/" className="nav-links">Services</Link>
       <span className="separator">|</span>
-      <Link to="/" className="nav-links">Contact Us</Link>
+      <Link to="/contact-us" className="nav-links">Contact Us</Link>
       <BookNow />
     </div>
   </div>

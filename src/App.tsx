@@ -7,6 +7,7 @@ import ServiceProfile from './pages/ServiceProfile/ServiceProfile'
 import DoctorProfile from './pages/DoctorProfile/DoctorProfile'
 import Navbar from './Components/Navbar/Navbar'
 import Footer from './Components/Footer/Footer'
+import 'aos/dist/aos.css';
 
 const App = () => {
   return (
