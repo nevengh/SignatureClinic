@@ -1,3 +1,4 @@
+@import url('https://fonts.googleapis.com/css2?family=Herr+Von+Muellerhoff&display=swap');
 *{
   margin: 0;
   padding: 0;
@@ -30,9 +31,14 @@ body {
   color: var(--secondary-dark);
   font-family: var(--font-family-base);
 }
+a{
+  text-decoration: none;
+  color: var(--light-gray);
+}
 :root {
   /* Fonts */
   --font-family-base: "Butler", sans-serif;
+  --font-family-secondary:"Herr Von Muellerhoff", cursive;
   /* Color */
   --primary-gold: #DAA520; 
   --light-gold: #E8B923;
@@ -41,4 +47,8 @@ body {
   --light-gray: #F5F5F5;
   --dark-gray: #333333; 
   --black: #000000;   
+  --border-color:#FFFFFF40;
+  --overlay-bg:#a5aea825;
+  --baby-rose:#F7E4E7;
 }
+
