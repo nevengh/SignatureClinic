@@ -1,11 +1,11 @@
 import { useState, useEffect, ReactNode } from "react";
 import { FaArrowLeft, FaArrowRight } from "react-icons/fa";
 import { useSwipeable } from "react-swipeable";
-import "./Slider.css"; // Ensure you have this CSS file or use global styles
+import "./Slider.css";
 
-interface SliderProps {
-  items: any[];
-  renderItem: (item: any) => ReactNode;
+interface SliderProps<T> {
+  items: T[];
+  renderItem: (item: T) => ReactNode;
   itemsPerViewConfig?: {
     desktop: number;
     tablet: number;
@@ -13,11 +13,11 @@ interface SliderProps {
   };
 }
 
-const Slider = ({
+const Slider = <T,>({
   items,
   renderItem,
   itemsPerViewConfig = { desktop: 3, tablet: 2, mobile: 1 },
-}: SliderProps) => {
+}: SliderProps<T>) => {
   const [currentIndex, setCurrentIndex] = useState(0);
   const [itemsPerView, setItemsPerView] = useState(
     itemsPerViewConfig.desktop

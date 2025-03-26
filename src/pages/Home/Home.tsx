@@ -1,12 +1,10 @@
-import { FaArrowLeft, FaArrowRight, FaCheck } from "react-icons/fa";
+import { FaCheck } from "react-icons/fa";
 import Hero from "../../Components/Hero/Hero";
 import { serviceDetailes } from "../../DB/service";
 import "./Home.css";
-import { useState, useEffect } from "react";
 import ServiceBox from "../../Components/ServiceBox/ServiceBox";
 import ArrowBTN from "../../Components/ArrowBTN/ArrowBTN";
 import Women from "../../assets/Women.webp";
-import { useSwipeable } from "react-swipeable";
 import Form from "../../Components/Form/Form";
 import doctor from "../../assets/doctor.webp";
 import DoctorBox from "../../Components/DoctorBox/DoctorBox";

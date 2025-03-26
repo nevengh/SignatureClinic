@@ -19,7 +19,8 @@
   
   .Btn::before {
     position: absolute;
-    content: "Book Now";
+    content: "Book a Visit";
+    letter-spacing: 1px;
     color: #ffd277;
     display: flex;
     align-items: center;
