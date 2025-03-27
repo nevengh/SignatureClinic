@@ -6,48 +6,66 @@ import ServiceBox from "../../Components/ServiceBox/ServiceBox";
 import ArrowBTN from "../../Components/ArrowBTN/ArrowBTN";
 import Women from "../../assets/Women.webp";
 import Form from "../../Components/Form/Form";
-import AOS from "aos";
 import DoctorBox from "../../Components/DoctorBox/DoctorBox";
 import Slider from "../../Components/Slider/Slider";
 import { doctors } from "../../DB/Doctors";
-import { useEffect } from "react";
+import { motion } from "framer-motion";
+
+// Fade from bottom (like fadeInUp)
+const fadeInUp = {
+  initial: { opacity: 0, y: 50 },
+  whileInView: { opacity: 1, y: 0 },
+  transition: { duration: 1 },
+};
+
+// Fade from top (like fadeInDown)
+const fadeInDown = {
+  initial: { opacity: 0, y: -50 },
+  whileInView: { opacity: 1, y: 0 },
+  transition: { duration: 1 },
+};
+
+
 
 const Home = () => {
-  useEffect(() => {
-    AOS.init({
-      duration: 1000,
-      once: true,
-      offset: 200,
-    });
-    AOS.refresh();
-  }, []);
-
   return (
     <div>
       <Hero />
+
       <div className="aboutUs-Home">
-        <p className="about-title" data-aos="fade-left" data-aos-delay="200">
+        <motion.p
+          className="about-title"
+          {...fadeInUp}
+          viewport={{ once: false }}
+        >
           Welcome to Our Clinic!
           <br />
           <span>Signature</span>
-        </p>
-        <p className="about-text" data-aos="fade-right" data-aos-delay="400">
+        </motion.p>
+
+        <motion.p
+          className="about-text"
+          {...fadeInUp}
+          transition={{ duration: 1, delay: 0.2 }}
+          viewport={{ once: false }}
+        >
           We help you be the best version of yourself by delivering bespoke
           treatment plans featuring the world's best beauty products backed by
           scientific data to ensure natural-looking, gorgeous results.
-        </p>
+        </motion.p>
       </div>
 
       {/* services */}
       <div className="PopularTreatment">
-        <div
+        <motion.div
           className="popularTreatment_Head"
-          data-aos="fade-up"
-          data-aos-delay="200"
+          {...fadeInUp}
+          viewport={{ once: false }}
         >
           <h1>Our Services</h1>
           <ArrowBTN BTN_Name="View All Services" />
-        </div>
+        </motion.div>
+
         <Slider
           items={serviceDetailes}
           renderItem={(service) => (
@@ -65,10 +83,10 @@ const Home = () => {
       {/* Enhance Your Natural Glow */}
       <div className="Home-Section">
         <div className="HomeSection-Container">
-          <div
+          <motion.div
             className="content-holder"
-            data-aos="fade-left"
-            data-aos-delay="200"
+            {...fadeInUp}
+            viewport={{ once: false }}
           >
             <p className="miny-title">Enhance Your Natural Glow</p>
             <h1>Feel Your Best With Advanced Aesthetic Medicine</h1>
@@ -76,69 +94,56 @@ const Home = () => {
               We are a modern clinic of aesthetic and anti-aging medicine for
               people who want to enjoy an attractive appearance for a long time.
             </p>
+
             <div className="treatment-list">
               <div className="List">
                 <p>
-                  <span>
-                    <FaCheck />
-                  </span>
-                  Neuromodulators;
+                  <span><FaCheck /></span> Neuromodulators;
                 </p>
                 <p>
-                  <span>
-                    <FaCheck />
-                  </span>
-                  Dermal Fillers;
+                  <span><FaCheck /></span> Dermal Fillers;
                 </p>
                 <p>
-                  <span>
-                    <FaCheck />
-                  </span>
-                  Collagen Stimulation;
+                  <span><FaCheck /></span> Collagen Stimulation;
                 </p>
               </div>
               <div className="List">
                 <p>
-                  <span>
-                    <FaCheck />
-                  </span>
-                  PDO Threads;
+                  <span><FaCheck /></span> PDO Threads;
                 </p>
                 <p>
-                  <span>
-                    <FaCheck />
-                  </span>
-                  Body Treatments;
+                  <span><FaCheck /></span> Body Treatments;
                 </p>
                 <p>
-                  <span>
-                    <FaCheck />
-                  </span>
-                  Laser Technology;
+                  <span><FaCheck /></span> Laser Technology;
                 </p>
               </div>
             </div>
+
             <ArrowBTN BTN_Name="Find Our More" />
-          </div>
-          <div
+          </motion.div>
+
+          <motion.div
             className="image-holder"
-            data-aos="fade-right"
-            data-aos-delay="200"
+            {...fadeInDown}
+            viewport={{ once: false }}
           >
             <img src={Women} alt="" />
-          </div>
+          </motion.div>
         </div>
       </div>
+
       {/* Doctors */}
       <div className="PopularTreatment">
-        <div
+        <motion.div
           className="popularTreatment_Head"
-          data-aos="fade-up"
-          data-aos-delay="200"
+          {...fadeInDown}
+          viewport={{ once: false }}
         >
           <h1>Our Team</h1>
           <ArrowBTN BTN_Name="View All Doctors" />
-        </div>
+        </motion.div>
+
         <Slider
           items={doctors}
           renderItem={(doc) => (
@@ -152,7 +157,8 @@ const Home = () => {
           )}
         />
       </div>
-      {/* Contatc  */}
+
+      {/* Contact Form */}
       <div className="home-contact">
         <Form />
       </div>

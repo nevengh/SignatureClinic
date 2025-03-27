@@ -40,7 +40,8 @@ a{
   --font-family-base: "Butler", sans-serif;
   --font-family-secondary:"Herr Von Muellerhoff", cursive;
   /* Color */
-  --primary-gold: #DAA520; 
+  --primary-gold: #b88f49; 
+  /* --primary-gold: #DAA520;  */
   --light-gold: #E8B923;
   --dark-gold: #B8860B; 
   --white: #FFFFFF;       
