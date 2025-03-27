@@ -1,5 +1,5 @@
 .Navbar {
-    position: fixed;
+    position: absolute;
     top: 0;
     width: 100%;
     z-index: 9999;
@@ -28,7 +28,8 @@
   }
   
   .nav-links {
-    font-size: 20px;
+    font-size: 18px;
+    font-weight: 400;
     letter-spacing: 1.3px;
     color: #222;
     text-decoration: none;
