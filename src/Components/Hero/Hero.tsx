@@ -3,6 +3,7 @@ import "./Hero.css";
 import hero1 from '../../assets/hero.webp'
 import hero2 from '../../assets/hero2.webp'
 import { motion } from "framer-motion";
+import { useTranslation } from "react-i18next";
 const Hero = () => {
   // Fade from top (like fadeInDown)
   const fadeInUp = {

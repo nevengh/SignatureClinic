@@ -4,8 +4,11 @@ import { Link } from "react-router-dom";
 import BookNow from "../BookNow/BookNow";
 import { useState } from "react";
 import { FaBars, FaTimes } from "react-icons/fa";
+import { useTranslation } from "react-i18next";
+import LanguageSwitcher from "../LanguageSwitcher/LanguageSwitcher";
 
 const Navbar = () => {
+  const { t } = useTranslation();
   const [toggle, setToggle] = useState(false);
   const TogglerHandler = () => {
     setToggle(!toggle);
@@ -24,13 +27,14 @@ const Navbar = () => {
 
     {/* Responsive Navigation Links */}
     <div className={`nav-menu ${toggle ? "active" : ""}`}>
-      <Link to="/" className="nav-links">Home</Link>
+      <Link to="/" className="nav-links">{t('Home')}</Link>
       <span className="separator">|</span>
-      <Link to="/" className="nav-links">About Us</Link>
+      <Link to="/" className="nav-links">{t('About')}</Link>
       <span className="separator">|</span>
-      <Link to="/" className="nav-links">Services</Link>
+      <Link to="/" className="nav-links">{t('Services')}</Link>
       <span className="separator">|</span>
-      <Link to="/contact-us" className="nav-links">Contact Us</Link>
+      <Link to="/contact-us" className="nav-links">{t('ContactUs')}</Link>
+      <LanguageSwitcher/>
       <BookNow />
     </div>
   </div>
