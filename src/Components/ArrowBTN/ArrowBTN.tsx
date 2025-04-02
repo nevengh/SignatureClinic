@@ -1,6 +1,5 @@
 import { Link } from 'react-router-dom';
 import './ArrowBTN.css'
-// Get Your Free Consultation
 interface ArrowBTN {
   BTN_Name :string;
   URL:string;

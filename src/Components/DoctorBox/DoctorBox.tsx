@@ -18,7 +18,7 @@ const DoctorBox = ({DoctorName,DoctorSpec,image,imgAlt}:DoctorBoxProps) => {
         <img src={image} alt={imgAlt} />
       </div>
       <div className="doctor-btn">
-        <ArrowBTN BTN_Name="Open Profile" />
+        <ArrowBTN URL="" BTN_Name="Open Profile" />
       </div>
     </div>
   );
