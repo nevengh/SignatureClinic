@@ -19,9 +19,12 @@ const Slider = <T,>({
   itemsPerViewConfig = { desktop: 3, tablet: 2, mobile: 1 },
 }: SliderProps<T>) => {
   const [currentIndex, setCurrentIndex] = useState(0);
-  const [itemsPerView, setItemsPerView] = useState(
-    itemsPerViewConfig.desktop
-  );
+  const [itemsPerView, setItemsPerView] = useState(itemsPerViewConfig.desktop);
+
+  // Detect if current document direction is RTL
+  const isRTL =
+    typeof document !== "undefined" &&
+    (document.dir === "rtl" || document.documentElement.dir === "rtl");
 
   useEffect(() => {
     const updateItemsPerView = () => {
@@ -41,20 +44,32 @@ const Slider = <T,>({
   }, [itemsPerViewConfig]);
 
   const handleNext = () => {
-    if (currentIndex < items.length - itemsPerView) {
-      setCurrentIndex((prev) => prev + 1);
+    if (isRTL) {
+      if (currentIndex > 0) {
+        setCurrentIndex((prev) => prev - 1);
+      }
+    } else {
+      if (currentIndex < items.length - itemsPerView) {
+        setCurrentIndex((prev) => prev + 1);
+      }
     }
   };
 
   const handlePrev = () => {
-    if (currentIndex > 0) {
-      setCurrentIndex((prev) => prev - 1);
+    if (isRTL) {
+      if (currentIndex < items.length - itemsPerView) {
+        setCurrentIndex((prev) => prev + 1);
+      }
+    } else {
+      if (currentIndex > 0) {
+        setCurrentIndex((prev) => prev - 1);
+      }
     }
   };
 
   const handlers = useSwipeable({
-    onSwipedLeft: handleNext,
-    onSwipedRight: handlePrev,
+    onSwipedLeft: isRTL ? handlePrev : handleNext,
+    onSwipedRight: isRTL ? handleNext : handlePrev,
     preventScrollOnSwipe: true,
     trackMouse: true,
   });
@@ -73,14 +88,11 @@ const Slider = <T,>({
         <div
           className="slider-track"
           style={{
-            transform: `translateX(-${currentIndex * (100 / itemsPerView)}%)`,
+            transform: `translateX(${isRTL ? '' : '-'}${currentIndex * (100 / itemsPerView)}%)`,
           }}
         >
           {items.map((item, index) => (
-            <div
-              key={index}
-              style={{ flex: `0 0 ${100 / itemsPerView}%` }}
-            >
+            <div key={index} style={{ flex: `0 0 ${100 / itemsPerView}%` }}>
               {renderItem(item)}
             </div>
           ))}
