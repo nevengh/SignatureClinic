@@ -13,7 +13,7 @@ const Navbar = () => {
   const TogglerHandler = () => {
     setToggle(!toggle);
   };
-  
+  const closeMenu = () => setToggle(false);
   return (
     <div className="Navbar">
     <div className="logo">
@@ -27,13 +27,13 @@ const Navbar = () => {
 
     {/* Responsive Navigation Links */}
     <div className={`nav-menu ${toggle ? "active" : ""}`}>
-      <Link to="/" className="nav-links">{t('Home')}</Link>
+      <Link onClick={closeMenu} to="/" className="nav-links">{t('Home')}</Link>
       <span className="separator">|</span>
-      <Link to="/about-us" className="nav-links">{t('About')}</Link>
+      <Link onClick={closeMenu} to="/about-us" className="nav-links">{t('About')}</Link>
+      <span  className="separator">|</span>
+      <Link onClick={closeMenu} to="/services" className="nav-links">{t('Services')}</Link>
       <span className="separator">|</span>
-      <Link to="/services" className="nav-links">{t('Services')}</Link>
-      <span className="separator">|</span>
-      <Link to="/contact-us" className="nav-links">{t('ContactUs')}</Link>
+      <Link onClick={closeMenu} to="/contact-us" className="nav-links">{t('ContactUs')}</Link>
       <LanguageSwitcher/>
       <BookNow />
     </div>

@@ -13,6 +13,8 @@ import Footer from './Components/Footer/Footer';
 import Preloader from './Components/Preloader/Preloader';
 import { useTranslation } from "react-i18next";
 import AllServices from './pages/AllServices/AllServices';
+import BackToTop from './Components/BackToTop/BackToTop';
+import ScrollToTop from './Components/ScrollToTop/ScrollToTop';
 const App = () => {
   const [loading, setLoading] = useState(true);
   const [hidePreloader, setHidePreloader] = useState(false);
@@ -43,6 +45,7 @@ const App = () => {
           transition={{ duration: 0.8, ease: 'easeOut' }}
         >
           <BrowserRouter>
+          <ScrollToTop />
             <Navbar />
             <Routes>
               <Route path="/" element={<Home />} />
@@ -53,6 +56,7 @@ const App = () => {
             </Routes>
             
             <Footer />
+            <BackToTop />
           </BrowserRouter>
         </motion.div>
       )}
