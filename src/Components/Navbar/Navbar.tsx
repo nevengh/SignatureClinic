@@ -29,9 +29,9 @@ const Navbar = () => {
     <div className={`nav-menu ${toggle ? "active" : ""}`}>
       <Link to="/" className="nav-links">{t('Home')}</Link>
       <span className="separator">|</span>
-      <Link to="/" className="nav-links">{t('About')}</Link>
+      <Link to="/about-us" className="nav-links">{t('About')}</Link>
       <span className="separator">|</span>
-      <Link to="/" className="nav-links">{t('Services')}</Link>
+      <Link to="/services" className="nav-links">{t('Services')}</Link>
       <span className="separator">|</span>
       <Link to="/contact-us" className="nav-links">{t('ContactUs')}</Link>
       <LanguageSwitcher/>

@@ -1,0 +1,9 @@
+.AllServicesContainer{
+    max-width: 1300px;
+    margin: 100px auto;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    gap: 20px;
+    flex-wrap: wrap;
+}

@@ -3,22 +3,24 @@ import { BrowserRouter, Route, Routes } from 'react-router-dom';
 import { motion } from 'framer-motion';
 
 import './App.css';
-import 'aos/dist/aos.css';
-
 import Home from './pages/Home/Home';
 import About from './pages/About/About';
 import ContactUs from './pages/ContactUs/ContactUs';
-import ServiceProfile from './pages/ServiceProfile/ServiceProfile';
 import DoctorProfile from './pages/DoctorProfile/DoctorProfile';
 
 import Navbar from './Components/Navbar/Navbar';
 import Footer from './Components/Footer/Footer';
 import Preloader from './Components/Preloader/Preloader';
-
+import { useTranslation } from "react-i18next";
+import AllServices from './pages/AllServices/AllServices';
 const App = () => {
   const [loading, setLoading] = useState(true);
   const [hidePreloader, setHidePreloader] = useState(false);
+  const { i18n } = useTranslation();
 
+  useEffect(() => {
+    document.documentElement.setAttribute("dir", i18n.language === "ar" ? "rtl" : "ltr");
+  }, [i18n.language]);
   useEffect(() => {
     const timer = setTimeout(() => {
       setHidePreloader(true); // Trigger fade-out
@@ -46,7 +48,7 @@ const App = () => {
               <Route path="/" element={<Home />} />
               <Route path="/about-us" element={<About />} />
               <Route path="/contact-us" element={<ContactUs />} />
-              <Route path="/service-profile" element={<ServiceProfile />} />
+              <Route path="/services" element={<AllServices />} />
               <Route path="/doctor-profile" element={<DoctorProfile />} />
             </Routes>
             

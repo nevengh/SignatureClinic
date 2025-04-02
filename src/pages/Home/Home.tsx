@@ -1,15 +1,19 @@
 import { FaCheck } from "react-icons/fa";
-import Hero from "../../Components/Hero/Hero";
-import { serviceDetailes } from "../../DB/service";
+
 import "./Home.css";
-import ServiceBox from "../../Components/ServiceBox/ServiceBox";
-import ArrowBTN from "../../Components/ArrowBTN/ArrowBTN";
 import Women from "../../assets/Women.webp";
-import Form from "../../Components/Form/Form";
-import DoctorBox from "../../Components/DoctorBox/DoctorBox";
-import Slider from "../../Components/Slider/Slider";
+import {
+  Slider,
+  DoctorBox,
+  Form,
+  ArrowBTN,
+  ServiceBox,
+  Hero,
+} from "../../Components/index";
 import { doctors } from "../../DB/Doctors";
 import { motion } from "framer-motion";
+import { useTranslation } from "react-i18next";
+import { useServiceDetails } from "../../DB/service";
 
 // Fade from bottom (like fadeInUp)
 const fadeInUp = {
@@ -25,9 +29,9 @@ const fadeInDown = {
   transition: { duration: 1 },
 };
 
-
-
 const Home = () => {
+  const services = useServiceDetails();
+  const {t} = useTranslation()
   return (
     <div>
       <Hero />
@@ -38,9 +42,9 @@ const Home = () => {
           {...fadeInUp}
           viewport={{ once: false }}
         >
-          Welcome to Our Clinic!
+          {t('WelcometoOurClinic')}
           <br />
-          <span>Signature</span>
+          <span>The S</span>
         </motion.p>
 
         <motion.p
@@ -49,9 +53,7 @@ const Home = () => {
           transition={{ duration: 1, delay: 0.2 }}
           viewport={{ once: false }}
         >
-          We help you be the best version of yourself by delivering bespoke
-          treatment plans featuring the world's best beauty products backed by
-          scientific data to ensure natural-looking, gorgeous results.
+          {t('WelcometoOurClinic_text')}
         </motion.p>
       </div>
 
@@ -62,12 +64,12 @@ const Home = () => {
           {...fadeInUp}
           viewport={{ once: false }}
         >
-          <h1>Our Services</h1>
-          <ArrowBTN BTN_Name="View All Services" />
+          <h1>{t('Service')}</h1>
+          <ArrowBTN BTN_Name={t('ViewAllServices')} URL="/services" />
         </motion.div>
 
         <Slider
-          items={serviceDetailes}
+          items={services}
           renderItem={(service) => (
             <ServiceBox
               key={service.id}
@@ -75,6 +77,7 @@ const Home = () => {
               imageUrl={service.img}
               serviceCategory={service.category}
               imgAlt={service.name}
+              ServiceDescription={service.description}
             />
           )}
         />
@@ -88,39 +91,37 @@ const Home = () => {
             {...fadeInUp}
             viewport={{ once: false }}
           >
-            <p className="miny-title">Enhance Your Natural Glow</p>
-            <h1>Feel Your Best With Advanced Aesthetic Medicine</h1>
+            <p className="miny-title">{t('About')} </p>
+            <h1>{t('ANewChapterinSkinHairCare')}</h1>
             <p className="miny-text">
-              We are a modern clinic of aesthetic and anti-aging medicine for
-              people who want to enjoy an attractive appearance for a long time.
+              {t('OurStory')}
             </p>
 
             <div className="treatment-list">
+              <h3>{t('WhyUS')}</h3>
               <div className="List">
                 <p>
-                  <span><FaCheck /></span> Neuromodulators;
+                  <span>
+                    <FaCheck />
+                  </span>{" "}
+                  {t('whyus_1')}
                 </p>
                 <p>
-                  <span><FaCheck /></span> Dermal Fillers;
+                  <span>
+                    <FaCheck />
+                  </span>{" "}
+                  {t('whyus_2')}
                 </p>
                 <p>
-                  <span><FaCheck /></span> Collagen Stimulation;
-                </p>
-              </div>
-              <div className="List">
-                <p>
-                  <span><FaCheck /></span> PDO Threads;
-                </p>
-                <p>
-                  <span><FaCheck /></span> Body Treatments;
-                </p>
-                <p>
-                  <span><FaCheck /></span> Laser Technology;
+                  <span>
+                    <FaCheck />
+                  </span>{" "}
+                  {t('whyus_3')}
                 </p>
               </div>
             </div>
 
-            <ArrowBTN BTN_Name="Find Our More" />
+            <ArrowBTN BTN_Name={t('FindOurMore')} URL="/about-us" />
           </motion.div>
 
           <motion.div
@@ -141,7 +142,7 @@ const Home = () => {
           viewport={{ once: false }}
         >
           <h1>Our Team</h1>
-          <ArrowBTN BTN_Name="View All Doctors" />
+          <ArrowBTN URL="" BTN_Name="View All Doctors" />
         </motion.div>
 
         <Slider

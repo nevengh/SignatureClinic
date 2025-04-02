@@ -2,7 +2,9 @@ import "./Footer.css";
 import logo from "../../assets/SVGGOLD.svg";
 import { Link } from "react-router-dom";
 import { FaCircle, FaFacebook, FaInstagram, FaTwitter } from "react-icons/fa";
+import { useTranslation } from "react-i18next";
 const Footer = () => {
+  const {t} = useTranslation()
   return (
     <div className="Footer">
       <div className="footer-section">
@@ -11,21 +13,34 @@ const Footer = () => {
         </div>
         <div className="footer-column">
           <div className="column">
-            <h2>Address</h2>
-            <p className="address">9 E 68th Street, 1C, New York, NY 10065</p>
+            <h2>{t('Address')}</h2>
+            <p className="address">{t('location')}</p>
             <p className="address">
-              Mon-Fri: 9am – 5pm; Sat: By Appointment Only
+              {t('daily')}
             </p>
           </div>
           <div className="column">
-            <h2>Say Hello</h2>
             <div>
-              <Link className="tele" to="tel:+1 800-123-1234">
+              <Link className="tele" to="tel:+971501447480">
                 {" "}
                 <span>
                   <FaCircle />
                 </span>{" "}
-                +1 800-123-1234
+                0501447480
+              </Link> <br />
+              <Link className="tele" to="tel:+971553206022">
+                {" "}
+                <span>
+                  <FaCircle />
+                </span>{" "}
+                0553206022
+              </Link><br />
+              <Link className="tele" to="tel:+971092286004">
+                {" "}
+                <span>
+                  <FaCircle />
+                </span>{" "}
+                092286004
               </Link>
               <p className="tele">
                 <span>
@@ -51,19 +66,19 @@ const Footer = () => {
       <div className="footer-section-1">
         <div className="footer-menu">
           <Link to="/" className="nav-links">
-            Home
+            {t('Home')}
           </Link>
 
           <Link to="/" className="nav-links">
-            About Us
+            {t('About')}
           </Link>
 
           <Link to="/" className="nav-links">
-            Services
+            {t('Service')}
           </Link>
 
           <Link to="/contact-us" className="nav-links">
-            Contact Us
+            {t('contact')}
           </Link>
         </div>
         <p className="copywrite">

@@ -1,11 +1,13 @@
+import { Link } from 'react-router-dom';
 import './ArrowBTN.css'
 // Get Your Free Consultation
 interface ArrowBTN {
   BTN_Name :string;
+  URL:string;
 }
-const ArrowBTN = ({BTN_Name}:ArrowBTN) => {
+const ArrowBTN = ({BTN_Name ,URL}:ArrowBTN) => {
   return (
-    <button className="cta">
+    <Link to={URL} className="cta">
           <span className="hover-underline-animation"> {BTN_Name} </span>
           <svg
             id="arrow-horizontal"
@@ -21,7 +23,7 @@ const ArrowBTN = ({BTN_Name}:ArrowBTN) => {
               transform="translate(30)"
             ></path>
           </svg>
-        </button>
+        </Link>
   )
 }
 

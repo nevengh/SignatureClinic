@@ -1,12 +1,14 @@
+
 import './ServiceBox.css';
-import { Link } from "react-router-dom";
+// import { Link } from "react-router-dom";
 interface serviceBoxProps {
     imageUrl :string;
     serviceCategory:string;
     ServiceName:string;
-    imgAlt:string
+    imgAlt:string;
+    ServiceDescription ?:string;
 }
-const ServiceBox = ({imageUrl,serviceCategory,ServiceName,imgAlt}:serviceBoxProps) => {
+const ServiceBox = ({imageUrl,serviceCategory,ServiceName,imgAlt,ServiceDescription}:serviceBoxProps) => {
   return (
     <div className="serviceBox">
       <img src={imageUrl} alt={imgAlt} />
@@ -16,7 +18,10 @@ const ServiceBox = ({imageUrl,serviceCategory,ServiceName,imgAlt}:serviceBoxProp
           <p className="serviceName">{ServiceName}</p>
         </div>
         <div className="viewDetails-BTN">
-          <Link to="">View Details</Link>
+          <p>
+            {ServiceDescription}
+          </p>
+          {/* <Link to="">{t('ViewDetails')}</Link> */}
         </div>
       </div>
     </div>

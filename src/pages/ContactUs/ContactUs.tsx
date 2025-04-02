@@ -1,15 +1,10 @@
 import "./ContactUs.css";
 import contactImg from "../../assets/contacts-1.webp";
-import { FaPhone } from "react-icons/fa6";
 import Form from "../../Components/Form/Form";
 import { motion } from "framer-motion";
+import PageHero from "../../Components/PageHero/PageHero";
+import { useTranslation } from "react-i18next";
 
-// Fade from bottom (like fadeInUp)
-const fadeInUp = {
-  initial: { opacity: 0, y: 50 },
-  whileInView: { opacity: 1, y: 0 },
-  transition: { duration: 1 },
-};
 
 // Fade from top (like fadeInDown)
 const fadeInDown = {
@@ -19,44 +14,12 @@ const fadeInDown = {
 };
 
 const ContactUs = () => {
+  const {t} = useTranslation();
   return (
     <div className="ContactUs">
-      <div className="HomeSection-Container">
-        <div className="image-holder">
-          <img src={contactImg} alt="" />
-        </div>
+      <PageHero BookUrl="#contact" Image={contactImg} PageName="Contact Us" pageSubhead={t('ContactUsSubhead')}  />
 
-        <motion.div
-          className="content-holder"
-          {...fadeInUp}
-          viewport={{ once: false, amount: 0.4 }}
-        >
-          <p className="contact-subtitle">Contact Us</p>
-          <h1 className="contact-Maintitle">
-            Contact Us Easily Online, by Phone or by Dropping In
-          </h1>
-
-          <motion.div
-            className="contact-btns"
-            initial={{ opacity: 0, y: 20 }}
-            whileInView={{ opacity: 1, y: 0 }}
-            transition={{ duration: 1, delay: 0.4 }}
-            viewport={{ once: false }}
-          >
-            <a href="#" className="contact-book">
-              Book Online
-            </a>
-            <a className="contact-phone" href="tel:9999">
-              <span>
-                <FaPhone />
-              </span>
-              Call: 1-800-123-1234
-            </a>
-          </motion.div>
-        </motion.div>
-      </div>
-
-      <div className="contact-form">
+      <div id="contact" className="contact-form">
         <Form />
       </div>
 

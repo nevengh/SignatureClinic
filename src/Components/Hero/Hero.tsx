@@ -3,7 +3,9 @@ import "./Hero.css";
 import hero1 from '../../assets/hero.webp'
 import hero2 from '../../assets/hero2.webp'
 import { motion } from "framer-motion";
+import { useTranslation } from "react-i18next";
 const Hero = () => {
+  const {t} = useTranslation();
   // Fade from top (like fadeInDown)
   const fadeInUp = {
     initial: { opacity: 0, y: 50 },
@@ -15,21 +17,22 @@ const Hero = () => {
       <div  className="MainTitle">
         <motion.h1  {...fadeInUp}
           viewport={{ once: false }}>
-          Bespoke Treatments.
+          {t('ClinicName')}
           <br />
-          Natural Results.
+          {t('MainTitleHero')}
           <br />
-          <span>The Best of You.</span>
+          <span>{t('MainTitleHero2')}
+           </span>
         </motion.h1>
-        <ArrowBTN BTN_Name="Get Your Free Consultation" />
+        <ArrowBTN BTN_Name="Get Your Free Consultation" URL="" />
       </div>
       <div className="Subtitle">
-        <span>Enhance Your Natural Glow</span>
+        <span>{t('subtitleHero')}</span>
         <motion.p  {...fadeInUp}
           viewport={{ once: false }} >
-          Feel Your Best With Advanced
+          {t('subtitleHero2')}
           <br />
-          Aesthetic Medicine.
+          {t('subtitleHero3')}
         </motion.p>
       </div>
       <div className="hero-image">

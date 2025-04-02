@@ -44,6 +44,10 @@
     margin-left: 45px;
     gap: 10px;
   }
+  :dir(rtl) .popularTreatment_Head{
+    margin-left: 0;
+    margin-right: 45px;
+  }
   .popularTreatment_Head .cta{
     margin-left: 15px;
   }
@@ -54,33 +58,6 @@
     overflow: hidden; /* Hide overflow to create slider effect */
   }
   
-  .slider-track {
-    display: flex;
-    transition: transform 0.5s ease-in-out; /* Smooth sliding animation */
-  }
-  
- 
-  
-  .arrow-container {
-    margin-right: 50px;
-    display: flex;
-    justify-content: end;
-    align-items: end;
-    gap: 20px;
-    margin-top: 20px; /* Adjusted margin */
-  }
-  
-  .arrow-container .icon {
-    cursor: pointer;
-    width: 50px;
-    height: 50px;
-    border-radius: 50%;
-    border: 1px solid #222;
-    background: linear-gradient(90deg, rgba(184, 134, 11, 1) 12%, rgba(232, 185, 35, 1) 57%);
-    display: flex;
-    justify-content: center;
-    align-items: center;
-  }
 
 
 
@@ -141,8 +118,9 @@
   .treatment-list{
     margin-top: 30px;
     display: flex;
+    flex-direction: column;
     justify-content: start;
-    gap: 60px;
+    gap: 20px;
   }
   .treatment-list p{
     margin-bottom: 20px;
@@ -170,7 +148,10 @@
   margin-top: 60px;
 }
 
-
+.Clinic-name{
+  color: var(--primary-gold);
+  font-weight: bold;
+}
 
 
   @media(max-width:1024px){
