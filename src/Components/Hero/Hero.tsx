@@ -19,7 +19,7 @@ const Hero = () => {
           viewport={{ once: false }}>
           {t('ClinicName')}
           <br />
-          {t('MainTitleHero')}
+          {t('MainTitleHero')} {" "}
           <br />
           <span>{t('MainTitleHero2')}
            </span>
@@ -30,7 +30,7 @@ const Hero = () => {
         <span>{t('subtitleHero')}</span>
         <motion.p  {...fadeInUp}
           viewport={{ once: false }} >
-          {t('subtitleHero2')}
+          {t('subtitleHero2')}  
           <br />
           {t('subtitleHero3')}
         </motion.p>

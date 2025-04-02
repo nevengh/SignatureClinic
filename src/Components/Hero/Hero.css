@@ -118,31 +118,31 @@
 */
 /* When in RTL mode */
 
-:dir(rtl) .MainTitle {
-    left: auto;
-    right: 50%;
-    transform: translate(50%, -50%);
-}
-
-:dir(rtl) .Subtitle {
-    left: auto;
-    right: 2%;
-    text-align: right;
-}
-
-
-
-:dir(rtl) .hero-image-two {
-    right: auto;
-    left: 5%;
-}
-
+@media(min-width: 779px){
+    :dir(rtl) .MainTitle {
+        left: auto;
+        right: 50%;
+        transform: translate(50%, -50%);
+    }
+  
+    :dir(rtl) .Subtitle {
+        left: auto;
+        right: 2%;
+        text-align: right;
+    }
+  
+    :dir(rtl) .hero-image-two {
+        right: auto;
+        left: 5%;
+    }
+  }
 
 
 
 
 
 /* Media query */
+
 @media(max-width:920px){
     .hero-image,.hero-image-two{
         display: none;
