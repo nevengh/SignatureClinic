@@ -1,12 +1,13 @@
 import { useTranslation } from 'react-i18next'
 import './BookNow.css'
+import { Link } from 'react-router-dom'
 
 const BookNow = () => {
   const {t} = useTranslation()
   return (
-    <button className="Btn">
+    <Link to='/contact-us'  className="Btn">
     {t("bookVisit")} {/* الترجمة هنا */}
-  </button>
+    </Link>
   )
 }
 

@@ -82,7 +82,7 @@ const Footer = () => {
           </Link>
         </div>
         <p className="copywrite">
-        © 2025 The Signature Clinic. All rights reserved.
+        © 2025 The S Clinic. All rights reserved.
         </p>
       </div>
     </div>
