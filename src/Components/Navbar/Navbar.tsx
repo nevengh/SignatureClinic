@@ -1,7 +1,7 @@
 import "./Navbar.css";
 import logo from "../../assets/SVGGOLD.svg";
 import { Link } from "react-router-dom";
-import BookNow from "../BookNow/BookNow";
+import BookNow from "../shared/BookNow/BookNow";
 import { useState } from "react";
 import { FaBars, FaTimes } from "react-icons/fa";
 import { useTranslation } from "react-i18next";

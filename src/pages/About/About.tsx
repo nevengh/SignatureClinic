@@ -1,7 +1,7 @@
 import "./About.css";
-import aboutImage from '../../assets/beautiful-young-girl-touching-her-face-youth-skin-care-concept(2).webp'
+import aboutImage from "../../assets/beautiful-young-girl-touching-her-face-youth-skin-care-concept(2).webp";
 import { useTranslation } from "react-i18next";
-import PageHero from "../../Components/PageHero/PageHero";
+import PageHero from "../../Components/shared/PageHero/PageHero";
 import { motion } from "framer-motion";
 import { doctors } from "../../DB/Doctors";
 import { ArrowBTN, DoctorBox, Slider } from "../../Components";
@@ -19,38 +19,43 @@ const fadeInDown = {
   transition: { duration: 1 },
 };
 const About = () => {
-const {t} = useTranslation()
+  const { t } = useTranslation();
   return (
     <div>
-      <PageHero BookUrl="/contact-us" Image={aboutImage} PageName={t('About')} pageSubhead={t('AboutUssubhead')}   />
+      <PageHero
+        BookUrl="/contact-us"
+        Image={aboutImage}
+        PageName={t("About")}
+        pageSubhead={t("AboutUssubhead")}
+      />
       <div className="aboutUs-Home">
-              <motion.p
-                className="about-title"
-                {...fadeInUp}
-                viewport={{ once: false }}
-              >
-                {t('WelcometoOurClinic')}
-                <br />
-                <span>The S</span>
-              </motion.p>
-      
-              <motion.p
-                className="about-text"
-                {...fadeInUp}
-                transition={{ duration: 1, delay: 0.2 }}
-                viewport={{ once: false }}
-              >
-                {t('WelcometoOurClinic_text')}
-              </motion.p>
-            </div>
-            <div className="PopularTreatment">
+        <motion.p
+          className="about-title"
+          {...fadeInUp}
+          viewport={{ once: false }}
+        >
+          {t("WelcometoOurClinic")}
+          <br />
+          <span>{t("ClinicName")}</span>
+        </motion.p>
+
+        <motion.p
+          className="about-text"
+          {...fadeInUp}
+          transition={{ duration: 1, delay: 0.2 }}
+          viewport={{ once: false }}
+        >
+          {t("WelcometoOurClinic_text")}
+        </motion.p>
+      </div>
+      <div className="PopularTreatment">
         <motion.div
           className="popularTreatment_Head"
           {...fadeInDown}
           viewport={{ once: false }}
         >
-          <h1>Our Team</h1>
-          <ArrowBTN URL="" BTN_Name="View All Doctors" />
+          <h1>{t("OurTeam")}</h1>
+          <ArrowBTN URL="" BTN_Name={t("ViewAllDoctors")} />
         </motion.div>
 
         <Slider

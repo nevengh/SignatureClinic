@@ -1,4 +1,4 @@
-import ArrowBTN from "../ArrowBTN/ArrowBTN";
+import ArrowBTN from "../shared/ArrowBTN/ArrowBTN";
 import "./Hero.css";
 import hero1 from '../../assets/hero.webp'
 import hero2 from '../../assets/hero2.webp'

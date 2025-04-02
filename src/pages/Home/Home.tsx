@@ -136,28 +136,28 @@ const Home = () => {
 
       {/* Doctors */}
       <div className="PopularTreatment">
-        <motion.div
-          className="popularTreatment_Head"
-          {...fadeInDown}
-          viewport={{ once: false }}
-        >
-          <h1>Our Team</h1>
-          <ArrowBTN URL="" BTN_Name="View All Doctors" />
-        </motion.div>
-
-        <Slider
-          items={doctors}
-          renderItem={(doc) => (
-            <DoctorBox
-              key={doc.id}
-              DoctorName={doc.name}
-              DoctorSpec={doc.spec}
-              image={doc.img}
-              imgAlt={doc.name}
-            />
-          )}
-        />
-      </div>
+              <motion.div
+                className="popularTreatment_Head"
+                {...fadeInDown}
+                viewport={{ once: false }}
+              >
+                <h1>{t("OurTeam")}</h1>
+                <ArrowBTN URL="" BTN_Name={t("ViewAllDoctors")} />
+              </motion.div>
+      
+              <Slider
+                items={doctors}
+                renderItem={(doc) => (
+                  <DoctorBox
+                    key={doc.id}
+                    DoctorName={doc.name}
+                    DoctorSpec={doc.spec}
+                    image={doc.img}
+                    imgAlt={doc.name}
+                  />
+                )}
+              />
+            </div>
 
       {/* Contact Form */}
       <div className="home-contact">

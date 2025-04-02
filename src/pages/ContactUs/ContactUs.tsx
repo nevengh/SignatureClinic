@@ -1,8 +1,8 @@
 import "./ContactUs.css";
 import contactImg from "../../assets/contacts-1.webp";
-import Form from "../../Components/Form/Form";
+import Form from "../../Components/shared/Form/Form";
 import { motion } from "framer-motion";
-import PageHero from "../../Components/PageHero/PageHero";
+import PageHero from "../../Components/shared/PageHero/PageHero";
 import { useTranslation } from "react-i18next";
 
 
@@ -29,23 +29,20 @@ const ContactUs = () => {
         viewport={{ once: false, amount: 0.3 }}
       >
         <div className="contact-information">
-          <h1>Contact Information</h1>
+          <h1>{t('ContactInformation')}</h1>
           <p>
-            Thank you for visiting our website. We are here to assist you with
-            any inquiries you may have.
+           {t('')}
           </p>
 
           <div className="contact-details-container">
             <div className="contact-address">
-              <h3>Address:</h3>
-              <p>14960 Florence Trail Apple Valley, MN 55124</p>
+              <h3>{t('Address')}:</h3>
+              <p>{t('location')}</p>
             </div>
             <div className="contact-address">
-              <h3>Service Times:</h3>
+              <h3>{t('ServiceTimes')}:</h3>
               <p>
-                Saturdays 4 pm
-                <br />
-                Sundays 9 & 11 am
+              {t('daily')}
               </p>
             </div>
           </div>
@@ -59,7 +56,7 @@ const ContactUs = () => {
           viewport={{ once: false }}
         >
           <iframe
-            src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2436.288396694153!2d-93.28771298445118!3d44.7860470771987!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x52b32c56e5f2c83d%3A0x2a7997a76bb66bb5!2s14960%20Florence%20Trail%2C%20Apple%20Valley%2C%20MN%2055124!5e0!3m2!1sen!2sus!4v1679596551257!5m2!1sen!2sus"
+            src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3611.848487508625!2d56.34998147513652!3d25.140812733982596!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3ef4f99dcdc03ca1%3A0xfd38bda07c13a79!2sSignature%20clinic!5e0!3m2!1sen!2sae!4v1743595281751!5m2!1sen!2sae"
             width="100%"
             height="400"
             style={{ border: "0" }}

@@ -1,6 +1,6 @@
 import { useTranslation } from "react-i18next";
 import "./Form.css";
-import { useServiceDetails } from "../../DB/service";
+import { useServiceDetails } from "../../../DB/service";
 
 const Form = () => {
   const {t} = useTranslation();
