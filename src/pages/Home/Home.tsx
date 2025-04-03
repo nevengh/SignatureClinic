@@ -204,7 +204,7 @@ const Home = () => {
       {/* Befor And After */}
       <div className="BeforeAndAfter">
         <div className="PopularTreatment">
-          <h1>Real People. Real Results.</h1>
+          <h1>{t('BeforeAndAfter')}</h1>
           <Slider
       items={beforeandafter}
       renderItem={(ele) => (
