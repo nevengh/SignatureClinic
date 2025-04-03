@@ -83,7 +83,17 @@ i18n
           ViewAllDoctors:"View All Doctors",
           ContactInformation:"Contact Information",
           contactInformationText:"شكرًا لزيارتكم موقعنا الإلكتروني. نحن هنا لمساعدتكم في أي استفسارات لديكم.",
-     
+          CustomerReview:"Success Stories",
+          MaithahSalem:"Maithah Salem",
+          MaithahSalemReview:"The service is good specially the body laser with vidya she the best",
+          Sara:"Sara M",
+          SaraReview:"The worker, divika, works hard and is comfortable dealing with people. She is also always smiling with people and her work is nice.",
+          NoranKhalilReview:"I really loved the S clinic ❤️❤️❤️❤️❤️, specially Ashly, she is so kind and professional. You can feel the difference during the session. Sure i am coming again soon. 🥰🥰🥰",
+          NoranKhalil:"Noran Khalil",
+          ShayneGarcia:"Shayne Garcia",
+          ShayneGarciaReview:"I will recommend this clinic 100 % for having professional Staff, I did hair treatment with them, Thanks To Dr. Esraa  (from Sudan) and nurse Varsha for assisting and taking care of me while doing the treatment.. ❤️Keep up the good work Guys..❤️😊 …",
+          GetYourFreeConsultation:"Get Your Free Consultation",
+          BeforeAndAfter:"Real People. Real Results.",
         },
 
       },
@@ -160,6 +170,18 @@ i18n
           ContactInformation:"معلومات الاتصال",
           contactInformationText:"شكرًا لزيارتكم موقعنا الإلكتروني. نحن هنا لمساعدتكم في أي استفسارات لديكم.",
           ServiceTimes:"أوقات العمل",
+          CustomerReview:"قصص ناجحة",
+          MaithahSalem:"ميساء سالم",
+          MaithahSalemReview:"الخدمة جيدة وخاصةً ليزر الجسم مع فيديا فهي الأفضل",
+          Sara:"سارة",
+          SaraReview:"العاملة، ديفيكا، تعمل بجد وتشعر بالراحة في التعامل مع الناس. كما أنها تبتسم دائمًا في وجوه الناس، وعملها رائع.",
+          NoranKhalil:"نوران خليل",
+          NoranKhalilReview:"أحببتُ عيادة S كثيرًا ❤️❤️❤️❤️❤️❤️، وخاصةً آشلي، فهي لطيفة ومهنية للغاية. يمكنكِ الشعور بالفرق خلال الجلسة. بالتأكيد سأعود قريبًا. 🥰🥰🥰",
+          ShayneGarcia:"شاين جارسيا",
+          ShayneGarciaReview:"أوصي بهذه العيادة ١٠٠٪؜ لطاقمها المحترف، عالجت شعري عندهم، شكرًا للدكتورة إسراء (من السودان) والممرضة فارشا على مساعدتي والعناية بي أثناء العلاج. ❤️استمروا في العمل الجيد يا شباب. ❤️😊 ...",
+          GetYourFreeConsultation:"احصل على استشارتك المجانية",
+          BeforeAndAfter:"أناس حقيقيون. نتائج حقيقية.",
+          
         },
       },
     },

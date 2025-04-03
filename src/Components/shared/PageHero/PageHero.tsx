@@ -40,11 +40,11 @@ const PageHero = ({Image,PageName,pageSubhead,BookUrl}:PageHeroProps) => {
         <a href={BookUrl} className="contact-book">
           Book Online
         </a>
-        <a className="contact-phone" href="tel:9999">
+        <a className="contact-phone" href="tel: +971501447480">
           <span>
             <FaPhone />
           </span>
-          Call: 1-800-123-1234
+          Call:  0501447480
         </a>
       </motion.div>
     </motion.div>

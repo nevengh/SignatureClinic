@@ -24,7 +24,7 @@ const Hero = () => {
           <span>{t('MainTitleHero2')}
            </span>
         </motion.h1>
-        <ArrowBTN BTN_Name="Get Your Free Consultation" URL="" />
+        <ArrowBTN BTN_Name={t('GetYourFreeConsultation')} URL="" />
       </div>
       <div className="Subtitle">
         <span>{t('subtitleHero')}</span>
