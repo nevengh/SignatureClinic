@@ -1,5 +1,5 @@
 import "./About.css";
-import aboutImage from "../../assets/beautiful-young-girl-touching-her-face-youth-skin-care-concept(2).webp";
+import aboutImage from "../../assets/clinic3.webp";
 import { useTranslation } from "react-i18next";
 import PageHero from "../../Components/shared/PageHero/PageHero";
 import { motion } from "framer-motion";

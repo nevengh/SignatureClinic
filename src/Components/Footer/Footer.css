@@ -3,6 +3,7 @@
     width: 100%;
     padding: 25px;
     background-color: var(--overlay-bg);
+    background: linear-gradient(to right,#77530a,rgb(152, 111, 28),#77530a,#77530a,rgb(152, 111, 28),#77530a);
 
 }
 .footer-section,.footer-section-1{
@@ -33,16 +34,15 @@
     gap: 25px;
     width: 300px;
     
-    
 }
 .column h2{
     font-weight: 300;
     font-size: 42px;
     line-height: 1.2em;
-    color: #222;
+    color: #fff;
 }
 .address{
-    color: #222;
+    color: #ccc;
     font-weight: 300;
     font-size: 17px;
     line-height: 1.45em;
@@ -76,8 +76,7 @@
     fill: var(--white); /* Change SVG fill to white on hover */
 }
 .tele{
-    color: #222;
-    margin-top: 20px;
+    color: #ccc;
     font-size: 18px;
     font-weight: 300;
 }

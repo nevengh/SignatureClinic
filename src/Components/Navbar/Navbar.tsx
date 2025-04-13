@@ -1,5 +1,5 @@
 import "./Navbar.css";
-import logo from "../../assets/SVGGOLD.svg";
+import logo from "../../assets/logo.png";
 import { Link } from "react-router-dom";
 import BookNow from "../shared/BookNow/BookNow";
 import { useState } from "react";

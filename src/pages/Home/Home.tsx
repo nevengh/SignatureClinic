@@ -1,9 +1,11 @@
 import { FaCheck } from "react-icons/fa";
-import case1 from '../../assets/BeforeAndAfter/antiaging-beauty-treatment(1)_11zon.webp'
-import case2 from '../../assets/BeforeAndAfter/antiaging-beauty-treatment_11zon.webp'
-import case3 from '../../assets/BeforeAndAfter/high-angle-view-25yearold-womans-dark-hair-before-after-hair-growth-treatment-portrait-st_11zon.webp'
-import case4 from '../../assets/BeforeAndAfter/man-is-revealing-remarkable-progress-his-hair-regrowth-journey_11zon.webp'
-import case5 from '../../assets/BeforeAndAfter/woman-face-before-after-cosmetic-procedure-cleaning-face_11zon.webp'
+import case1 from "../../assets/BeforeAndAfter/antiaging-beauty-treatment(1)_11zon.webp";
+import case6 from "../../assets/BeforeAndAfter/6041752219684030611.jpg";
+import case2 from "../../assets/BeforeAndAfter/antiaging-beauty-treatment_11zon.webp";
+import case3 from "../../assets/BeforeAndAfter/high-angle-view-25yearold-womans-dark-hair-before-after-hair-growth-treatment-portrait-st_11zon.webp";
+import case4 from "../../assets/BeforeAndAfter/man-is-revealing-remarkable-progress-his-hair-regrowth-journey_11zon.webp";
+import case5 from "../../assets/BeforeAndAfter/woman-face-before-after-cosmetic-procedure-cleaning-face_11zon.webp";
+import case7 from "../../assets/BeforeAndAfter/6044004019497714670_11zon.webp";
 import "./Home.css";
 import Women from "../../assets/Women.webp";
 import {
@@ -36,33 +38,44 @@ const fadeInDown = {
 };
 
 const Home = () => {
-  const beforeandafter =[
+  const beforeandafter = [
     {
-      id:1,
-      image:case1,
-      name:"",
+      id: 6,
+      image: case6,
+      name: "",
     },
     {
-      id:2,
-      image:case2,
-      name:""
+      id: 7,
+      image: case7,
+      name: "",
     },
     {
-      id:3,
-      image:case3,
-      name:""
+      id: 1,
+      image: case1,
+      name: "",
     },
     {
-      id:4,
-      image:case4,
-      name:""
+      id: 2,
+      image: case2,
+      name: "",
     },
     {
-      id:5,
-      image:case5,
-      name:""
-    }
-  ]
+      id: 3,
+      image: case3,
+      name: "",
+    },
+    {
+      id: 4,
+      image: case4,
+      name: "",
+    },
+    {
+      id: 5,
+      image: case5,
+      name: "",
+    },
+
+  ];
   const services = useServiceDetails();
   const { t } = useTranslation();
   return (
@@ -204,16 +217,13 @@ const Home = () => {
       {/* Befor And After */}
       <div className="BeforeAndAfter">
         <div className="PopularTreatment">
-          <h1>{t('BeforeAndAfter')}</h1>
+          <h1>{t("BeforeAndAfter")}</h1>
           <Slider
-      items={beforeandafter}
-      renderItem={(ele) => (
-        <BFAfter
-          image={ele.image}
-          imageAlt={ele.name}
-        />
-      )}
-      />
+            items={beforeandafter}
+            renderItem={(ele) => (
+              <BFAfter image={ele.image} imageAlt={ele.name} />
+            )}
+          />
         </div>
       </div>
       {/* Contact Form */}

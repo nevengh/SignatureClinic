@@ -1,5 +1,5 @@
 import "./Footer.css";
-import logo from "../../assets/SVGGOLD.svg";
+import logo from "../../assets/logo.png";
 import { Link } from "react-router-dom";
 import { FaCircle, FaFacebook, FaInstagram, FaTwitter } from "react-icons/fa";
 import { useTranslation } from "react-i18next";

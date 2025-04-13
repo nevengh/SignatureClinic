@@ -1,6 +1,6 @@
 import PageHero from "../../Components/shared/PageHero/PageHero";
 import "./AllServices.css";
-import AllServicesImage from "../../assets/front-view-woman-posing-with-gold-body-painting_11zon.webp";
+import AllServicesImage from "../../assets/beautiful-young-girl-touching-her-face-youth-skin-care-concept(2).webp";
 import { t } from "i18next";
 import { useServiceDetails } from "../../DB/service";
 import { ServiceBox } from "../../Components";

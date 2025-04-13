@@ -33,7 +33,7 @@ i18n
           whyus_3: "A commitment to advanced technology and real results.",
           FindOurMore: "Find Our More",
           WelcometoOurClinic: "Welcome to Our Clinic !",
-          WelcometoOurClinic_text: "Signature Clinic is raising the standard. Whether you’re looking for flawless skin, advanced hair restoration, or a place where your concerns are truly heard, we’re here to redefine your journey with beauty.",
+          WelcometoOurClinic_text: "The S Clinic is raising the standard. Whether you’re looking for flawless skin, advanced hair restoration, or a place where your concerns are truly heard, we’re here to redefine your journey with beauty.",
           SkinTreatments: "Skin Rejuvenation",
           HydraFacialDeepCleansing: "HydraFacial & Deep Cleansing ",
           HydraFacialDeepCleansingDesc: "A multi-step facial that deeply cleanses, hydrates, and nourishes for an instant glow.",

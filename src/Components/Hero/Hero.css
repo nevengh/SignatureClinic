@@ -108,6 +108,20 @@
   }
   
 
+  .HeroSlider {
+    width: 100%;
+    height: 100vh;
+    position: relative;
+    overflow: hidden;
+}
+
+.HeroImageSlide {
+    width: 100%;
+    height: 100vh;
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+}
 
 /* 
 *******************
