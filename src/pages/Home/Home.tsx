@@ -1,11 +1,13 @@
 import { FaCheck } from "react-icons/fa";
 import case1 from "../../assets/BeforeAndAfter/antiaging-beauty-treatment(1)_11zon.webp";
-import case6 from "../../assets/BeforeAndAfter/6041752219684030611.jpg";
+import case6 from "../../assets/BeforeAndAfter/6048412975225751953_11zon.jpg";
 import case2 from "../../assets/BeforeAndAfter/antiaging-beauty-treatment_11zon.webp";
 import case3 from "../../assets/BeforeAndAfter/high-angle-view-25yearold-womans-dark-hair-before-after-hair-growth-treatment-portrait-st_11zon.webp";
 import case4 from "../../assets/BeforeAndAfter/man-is-revealing-remarkable-progress-his-hair-regrowth-journey_11zon.webp";
 import case5 from "../../assets/BeforeAndAfter/woman-face-before-after-cosmetic-procedure-cleaning-face_11zon.webp";
-import case7 from "../../assets/BeforeAndAfter/6044004019497714670_11zon.webp";
+import case7 from "../../assets/BeforeAndAfter/WhatsApp Image 2025-04-14 at 22.16.27_11zon.webp";
+import case8 from "../../assets/BeforeAndAfter/WhatsApp Image 2025-04-14 at 22.15.13_11zon.webp";
+import case9 from "../../assets/BeforeAndAfter/WhatsApp Image 2025-04-14 at 22.15.12_11zon.webp";
 import "./Home.css";
 import Women from "../../assets/Women.webp";
 import {
@@ -22,6 +24,7 @@ import { useTranslation } from "react-i18next";
 import { useServiceDetails } from "../../DB/service";
 import CustomerReview from "../../Components/CustomerReview/CustomerReview";
 import BFAfter from "../../Components/shared/BFAfter/BFAfter";
+import { Link } from "react-router-dom";
 
 // Fade from bottom (like fadeInUp)
 const fadeInUp = {
@@ -39,45 +42,19 @@ const fadeInDown = {
 
 const Home = () => {
   const beforeandafter = [
-    {
-      id: 6,
-      image: case6,
-      name: "",
-    },
-    {
-      id: 7,
-      image: case7,
-      name: "",
-    },
-    {
-      id: 1,
-      image: case1,
-      name: "",
-    },
-    {
-      id: 2,
-      image: case2,
-      name: "",
-    },
-    {
-      id: 3,
-      image: case3,
-      name: "",
-    },
-    {
-      id: 4,
-      image: case4,
-      name: "",
-    },
-    {
-      id: 5,
-      image: case5,
-      name: "",
-    },
-
+    { id: 6, image: case6, name: "" },
+    { id: 7, image: case7, name: "" },
+    { id: 1, image: case1, name: "" },
+    { id: 2, image: case2, name: "" },
+    { id: 3, image: case3, name: "" },
+    { id: 4, image: case4, name: "" },
+    { id: 8, image: case8, name: "" },
+    { id: 5, image: case5, name: "" },
+    { id: 9, image: case9, name: "" },
   ];
   const services = useServiceDetails();
   const { t } = useTranslation();
+
   return (
     <div>
       <Hero />
@@ -103,7 +80,7 @@ const Home = () => {
         </motion.p>
       </div>
 
-      {/* services */}
+      {/* Services */}
       <div className="PopularTreatment">
         <motion.div
           className="popularTreatment_Head"
@@ -117,14 +94,15 @@ const Home = () => {
         <Slider
           items={services}
           renderItem={(service) => (
-            <ServiceBox
-              key={service.id}
-              ServiceName={service.name}
-              imageUrl={service.img}
-              serviceCategory={service.category}
-              imgAlt={service.name}
-              ServiceDescription={service.description}
-            />
+            <Link to={`/service/${service.id}`} key={service.id}>
+              <ServiceBox
+                ServiceName={service.category}
+                imageUrl={service.img}
+                serviceCategory={service.category}
+                imgAlt={service.category}
+                ServiceDescription={service.description}
+              />
+            </Link>
           )}
         />
       </div>
@@ -202,6 +180,7 @@ const Home = () => {
           )}
         />
       </div>
+
       {/* Customer Review */}
       <div className="PopularTreatment">
         <motion.div
@@ -210,11 +189,11 @@ const Home = () => {
           viewport={{ once: false }}
         >
           <h1>{t("CustomerReview")}</h1>
-          {/* <ArrowBTN BTN_Name={t('ViewAllServices')} URL="/services" /> */}
         </motion.div>
         <CustomerReview />
       </div>
-      {/* Befor And After */}
+
+      {/* Before And After */}
       <div className="BeforeAndAfter">
         <div className="PopularTreatment">
           <h1>{t("BeforeAndAfter")}</h1>
@@ -226,6 +205,7 @@ const Home = () => {
           />
         </div>
       </div>
+
       {/* Contact Form */}
       <div className="home-contact">
         <Form />

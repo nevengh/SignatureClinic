@@ -1,7 +1,7 @@
 import './ServiceBox.css';
-// import { Link } from "react-router-dom";
+import { useTranslation } from 'react-i18next';
 
-interface serviceBoxProps {
+interface ServiceBoxProps {
   imageUrl: string;
   serviceCategory: string;
   ServiceName: string;
@@ -15,7 +15,9 @@ const ServiceBox = ({
   ServiceName,
   imgAlt,
   ServiceDescription,
-}: serviceBoxProps) => {
+}: ServiceBoxProps) => {
+  const { t } = useTranslation();
+
   return (
     <div className="serviceBox">
       <img src={imageUrl} alt={imgAlt} loading="lazy" />
@@ -26,7 +28,7 @@ const ServiceBox = ({
         </div>
         <div className="viewDetails-BTN">
           <p>{ServiceDescription}</p>
-          {/* <Link to="">{t('ViewDetails')}</Link> */}
+          <a href="#">{t('ViewDetails')}</a>
         </div>
       </div>
     </div>
