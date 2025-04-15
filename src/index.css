@@ -9,21 +9,21 @@
 /* 1. Define the font using @font-face for each weight */
 @font-face {
   font-family: "Careem";
-  src: url("./CareemRegular/CareemRegular.ttf") format("truetype");
+  src: url("./assets/CareemRegular/CareemRegular.ttf") format("truetype");
   font-weight: 400; /* Regular */
   font-style: normal;
 }
 
 @font-face {
   font-family: "Careem";
-  src: url("./CareemBold/CareemBold.ttf") format("truetype");
+  src: url("./assets/CareemBold/CareemBold.ttf") format("truetype");
   font-weight: 700; /* Bold */
   font-style: normal;
 }
 
 @font-face {
   font-family: "Careem";
-  src: url("./CareemRegular/CareemRegular.ttf") format("truetype");
+  src: url("./assets/CareemRegular/CareemRegular.ttf") format("truetype");
   font-weight: 300; /* Light */
   font-style: normal;
 }

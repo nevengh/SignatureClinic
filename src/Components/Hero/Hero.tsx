@@ -7,8 +7,8 @@ import ArrowBTN from "../shared/ArrowBTN/ArrowBTN";
 import hero1 from '../../assets/hero.webp';
 import hero2 from '../../assets/hero2.webp';
 import slide1 from '../../assets/home-2-1.webp'; // background for first slide
-import slide2 from '../../assets/Clinic.jpg';   // background for second slide
-import slide3 from '../../assets/clinic2.jpg';  // background for third slide
+import slide2 from '../../assets/clinic3_11zon.webp';   // background for second slide
+import slide3 from '../../assets/clinic2_11zon.jpg';  // background for third slide
 import './Hero.css';
 
 const slides = [
