@@ -7,38 +7,37 @@
 
 
 /* 1. Define the font using @font-face for each weight */
-@font-face {
+@font-face{
   font-family: "Careem";
-  src: url("./assets/CareemRegular/CareemRegular.ttf") format("truetype");
-  font-weight: 400; /* Regular */
+  src: url("./assets/CareemRegular/CareemRegular.woff2") format("truetype");
+  font-weight: 400; 
   font-style: normal;
 }
 
-@font-face {
+@font-face{
   font-family: "Careem";
-  src: url("./assets/CareemBold/CareemBold.ttf") format("truetype");
-  font-weight: 700; /* Bold */
+  src: url("./assets/CareemBold/CareemBold.woff2") format("truetype");
+  font-weight: 700; 
   font-style: normal;
 }
 
-@font-face {
+@font-face{
   font-family: "Careem";
-  src: url("./assets/CareemRegular/CareemRegular.ttf") format("truetype");
-  font-weight: 300; /* Light */
+  src: url("./assets/CareemRegular/CareemRegular.woff2") format("truetype");
+  font-weight: 300; 
   font-style: normal;
 }
 body {
   background-color: var(--light-gray);
   color: var(--secondary-dark);
-  font-family: var(--font-family-base);
 }
 a{
   text-decoration: none;
   color: var(--light-gray);
 }
-:root {
+:root{
   /* Fonts */
-  --font-family-base: "Careem", sans-serif;
+  /* --font-family-base: "Careem", sans-serif; */
   --font-family-secondary:"Herr Von Muellerhoff", cursive;
   /* Color */
   --primary-gold: #b88f49; 
