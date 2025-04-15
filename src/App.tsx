@@ -27,7 +27,7 @@ const App = () => {
     const timer = setTimeout(() => {
       setHidePreloader(true); // Trigger fade-out
       setTimeout(() => setLoading(false), 800); // Wait for fade-out to finish
-    }, 3000);
+    }, 3500);
 
     return () => clearTimeout(timer);
   }, []);
