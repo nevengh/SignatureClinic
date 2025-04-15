@@ -12,7 +12,6 @@ import Navbar from './Components/Navbar/Navbar';
 import Footer from './Components/Footer/Footer';
 import Preloader from './Components/Preloader/Preloader';
 import { useTranslation } from "react-i18next";
-import AllServices from './pages/AllServices/AllServices';
 import BackToTop from './Components/BackToTop/BackToTop';
 import ScrollToTop from './Components/ScrollToTop/ScrollToTop';
 import ServiceProfile from './pages/ServiceProfile/ServiceProfile';
@@ -52,7 +51,7 @@ const App = () => {
               <Route path="/" element={<Home />} />
               <Route path="/about-us" element={<About />} />
               <Route path="/contact-us" element={<ContactUs />} />
-              <Route path="/services" element={<AllServices />} />
+
               <Route path="/service/:id" element={<ServiceProfile />} />
               <Route path="/doctor-profile" element={<DoctorProfile />} />
             </Routes>
