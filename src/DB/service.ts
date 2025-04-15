@@ -5,7 +5,7 @@ import BridalPackages from '../assets/contacts-1.webp';
 import RFMicroneedling from '../assets/service-3 (1).webp';
 import Plasma from '../assets/man-getting-prp-injection-alopecia_11zon_11zon.webp';
 import exosome from '../assets/woman-getting-hair-loss-treatment-clinic (1)_11zon_11zon_11zon.webp';
-import Gcell from '../assets/G-cell.webp';
+import Gcell from '../assets/G-cell_11zon.webp';
 import HairPackage from '../assets/caucasian-man-after-hair-transplantation(1)_11zon.webp';
 import { useTranslation } from 'react-i18next';
 
