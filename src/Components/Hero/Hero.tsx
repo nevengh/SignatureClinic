@@ -61,10 +61,11 @@ const Hero = () => {
                 <img
                   src={hero1}
                   alt="Woman receiving a cosmetic facial injection treatment at a clinic"
+                  loading='lazy'
                 />
               </div>
               <div className="hero-image-two">
-                <img src={hero2} alt="" />
+                <img src={hero2} alt=""  loading='lazy' />
               </div>
             </div>
           </SwiperSlide>

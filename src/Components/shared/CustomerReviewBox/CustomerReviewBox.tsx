@@ -19,7 +19,7 @@ const CustomerReviewBox = ({ image, name, review, star = 0, altImage }: Customer
       </div>
       <p className="review">{review}</p>
       <div className="CustomerImage">
-        <img src={image} alt={altImage} />
+        <img src={image} alt={altImage}  loading='lazy' />
         <h4>{name}</h4>
       </div>
     </div>

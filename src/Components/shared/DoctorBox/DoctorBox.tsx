@@ -15,7 +15,7 @@ const DoctorBox = ({DoctorName,DoctorSpec,image,imgAlt}:DoctorBoxProps) => {
         <p className="DoctorSpec">{DoctorSpec}</p>
       </div>
       <div className="doctor-img">
-        <img src={image} alt={imgAlt} />
+        <img src={image} alt={imgAlt}  loading='lazy' />
       </div>
       <div className="doctor-btn">
         <ArrowBTN URL="" BTN_Name="Open Profile" />

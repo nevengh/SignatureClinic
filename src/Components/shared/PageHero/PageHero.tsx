@@ -17,7 +17,7 @@ const PageHero = ({Image,PageName,pageSubhead,BookUrl}:PageHeroProps) => {
   return (
     <div className="HomeSection-Container">
     <div className="image-holder">
-      <img src={Image} alt={PageName} />
+      <img src={Image} alt={PageName}  loading='lazy' />
     </div>
 
     <motion.div

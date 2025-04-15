@@ -6,7 +6,7 @@ interface BFAfterProps{
 const BFAfter = ({image,imageAlt}:BFAfterProps) => {
   return (
     <div className='BFAfter'>
-        <img src={image} alt={imageAlt} />
+        <img src={image} alt={imageAlt}  loading='lazy' />
     </div>
   )
 }
