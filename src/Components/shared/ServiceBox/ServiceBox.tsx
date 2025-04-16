@@ -14,7 +14,7 @@ const ServiceBox = ({
   serviceCategory,
   ServiceName,
   imgAlt,
-  ServiceDescription,
+
 }: ServiceBoxProps) => {
   const { t } = useTranslation();
 
@@ -27,7 +27,6 @@ const ServiceBox = ({
           <p className="serviceName">{ServiceName}</p>
         </div>
         <div className="viewDetails-BTN">
-          <p>{ServiceDescription}</p>
           <a href="#">{t('ViewDetails')}</a>
         </div>
       </div>
